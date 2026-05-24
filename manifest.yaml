@@ -1,7 +1,7 @@
 manifest_version: 1
 version: 0.0.1
 type: plugin
-author: custom_developer
+author: KYAnounymous
 name: japan_finance
 icon: icon.svg           # <-- 【重要】ルートの最上部に「icon: icon.svg」とだけ書くのがDifyの正確な仕様です
 label:
