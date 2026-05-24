@@ -1,0 +1,30 @@
+name: get_stock_price
+label: 日本株価取得
+description: 4桁の半角英数字コード（例:7203、130A）を指定して、日本のYahoo!ファイナンスから現在の株価、企業名、前日比などを取得します。
+
+parameters:
+  - name: ticker_code
+    type: string
+    required: true
+    label: 銘柄コード
+    description: 日本の4桁の株式銘柄コード（例：トヨタなら 7203、新規上場なら 130A）。
+    form: llm
+
+output_schema:
+  type: object
+  properties:
+    ticker:
+      type: string
+      description: 銘柄コード
+    company_name:
+      type: string
+      description: 企業名
+    current_price:
+      type: string
+      description: 現在の株価（円）
+    price_change:
+      type: string
+      description: 前日比の価格変化額
+    price_change_percentage:
+      type: string
+      description: 前日比の騰落率（%）

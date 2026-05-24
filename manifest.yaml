@@ -1,0 +1,32 @@
+manifest_version: 1
+version: 0.0.1
+type: plugin
+author: custom_developer
+name: japan_finance
+icon: icon.svg           # <-- 【重要】ルートの最上部に「icon: icon.svg」とだけ書くのがDifyの正確な仕様です
+label:
+  en_US: Japan Yahoo Finance
+  ja_JP: 日本Yahoo!ファイナンス
+description:
+  en_US: Fetch stock prices and information safely from Yahoo! Finance Japan.
+  ja_JP: 日本のYahoo!ファイナンスから株価や企業情報を取得します。
+tags:
+  - finance
+plugins:
+  tools:
+    - tools/stock_price.yaml
+
+resource:
+  memory: 52428800
+
+meta:
+  version: 0.0.1
+  arch:
+    - amd64
+    - arm64
+  runner:
+    language: python
+    version: 3.12
+    entrypoint: tools.stock_price:JapanStockPriceTool
+
+created_at: "2026-05-24T17:20:00Z"
